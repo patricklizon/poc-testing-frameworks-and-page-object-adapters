@@ -1,16 +1,21 @@
 <script setup lang="ts">
-defineProps<{
+import { HelloWorldPageObject } from './HelloWorld.po';
+
+withDefaults(defineProps<{
+  tid?: string
   msg: string
-}>()
+}>(), {
+  tid: HelloWorldPageObject.defaultRootTid
+})
 </script>
 
 <template>
-  <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <h3>
+  <div class="greetings" :data-testid="tid">
+    <h1 class="green" :data-testid="tid + '.message'">{{ msg }}</h1>
+    <h3 :data-testid="tid + '.copy'">
       You’ve successfully created a project with
-      <a href="https://vite.dev/" target="_blank" rel="noopener">Vite</a> +
-      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>. What's next?
+      <a href="https://vite.dev/" target="_blank" rel="noopener" :data-testid="tid + '.external-link'">Vite</a> +
+      <a href="https://vuejs.org/" target="_blank" rel="noopener" :data-testid="tid + '.external-link'">Vue 3</a>. What's next?
     </h3>
   </div>
 </template>
