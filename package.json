@@ -1,0 +1,39 @@
+{
+  "name": "page-object-adapters",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview",
+    "test:unit": "vitest",
+    "test:cypress": "start-server-and-test preview http://localhost:4173 'cypress run --e2e'",
+    "test:playwright": "start-server-and-test preview http://localhost:4173 'playwright'",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build"
+  },
+  "dependencies": {
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.50.0",
+    "@tsconfig/node22": "^22.0.0",
+    "@types/jsdom": "^21.1.7",
+    "@types/node": "^22.10.7",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/test-utils": "^2.4.6",
+    "@vue/tsconfig": "^0.7.0",
+    "cypress": "^14.0.0",
+    "jsdom": "^26.0.0",
+    "npm-run-all2": "^7.0.2",
+    "start-server-and-test": "^2.0.10",
+    "typescript": "~5.7.3",
+    "vite": "^6.0.11",
+    "vite-plugin-vue-devtools": "^7.7.0",
+    "vitest": "^3.0.2",
+    "vue-tsc": "^2.2.0"
+  },
+  "packageManager": "npm@10.9.0+sha512.65a9c38a8172948f617a53619762cd77e12b9950fe1f9239debcb8d62c652f2081824b986fee7c0af6c0a7df615becebe4bf56e17ec27214a87aa29d9e038b4b"
+}
