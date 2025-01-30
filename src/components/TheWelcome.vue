@@ -4,7 +4,7 @@ import HelloWorld from './HelloWorld.vue'
 import DocumentationIcon from './icons/IconDocumentation.vue'
 import ToolingIcon from './icons/IconTooling.vue'
 import EcosystemIcon from './icons/IconEcosystem.vue'
-import CommunityIcon from './icons/IconCommunity.vue'
+import { IconCommunity } from './icons'
 import SupportIcon from './icons/IconSupport.vue'
 import { TheWelcomePo } from './TheWelcome.po'
 
@@ -76,7 +76,7 @@ const openReadmeInEditor = () => fetch('/__open-in-editor?file=README.md')
 
     <WelcomeItem :data-testid="props.tid + '.hello-world'">
       <template #icon>
-        <CommunityIcon />
+        <IconCommunity />
       </template>
       <template #heading>Community</template>
 

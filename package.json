@@ -12,7 +12,7 @@
     "test:cypress:browser": "start-server-and-test preview http://localhost:4173 'cypress run --e2e'",
     "test:cypress": "start-server-and-test preview http://localhost:4173 'cypress run --e2e'",
     "test:playwright": "start-server-and-test preview http://localhost:4173 'playwright test --ui'",
-    "test:vitest:browser": "vitest --browser=chromium --config vitest.browser.config.ts",
+    "test:vitest:browser": "vitest --config vitest.browser.config.ts",
     "test:vitest": "vitest --config vitest.config.ts",
     "type-check": "vue-tsc --build"
   },
@@ -37,6 +37,7 @@
     "typescript": "~5.7.3",
     "vite": "^6.0.11",
     "vite-plugin-vue-devtools": "^7.7.0",
+    "vite-svg-loader": "^5.1.0",
     "vitest": "^3.0.4",
     "vitest-browser-vue": "^0.1.0",
     "vue-tsc": "^2.2.0"

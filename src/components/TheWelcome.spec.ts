@@ -1,10 +1,10 @@
-import { afterEach, describe, it, expect } from 'vitest'
+import { beforeEach, describe, it, expect } from 'vitest'
 import { cleanup, render } from '@testing-library/vue'
 import { TestingLibraryAdapter } from '../lib/page-object/adapter.testing-library'
 import TheWelcome from './TheWelcome.vue'
 import { TheWelcomePo } from './TheWelcome.po'
 
-afterEach(cleanup)
+beforeEach(cleanup);
 
 describe('TheWelcome', () => {
   it('renders properly', async () => {

@@ -2,13 +2,13 @@
  * This test uses renderer's from vitest
  */
 
-import { afterEach, describe, it, expect } from 'vitest'
+import { beforeEach, describe, it, expect } from 'vitest'
 import { cleanup, render } from 'vitest-browser-vue'
 import TheWelcome from './TheWelcome.vue'
 import { TheWelcomePo } from './TheWelcome.po'
 import { VitestBrowserAdapter } from '../lib/page-object/adapter.vitest-browser'
 
-afterEach(cleanup)
+beforeEach(cleanup);
 
 describe('TheWelcome', () => {
   it('renders properly', async () => {

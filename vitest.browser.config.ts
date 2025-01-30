@@ -8,10 +8,13 @@ export default mergeConfig(
   defineConfig({
     test: {
       environment: 'jsdom',
-      include: ["src/**/*.browser*", "src/**/*.spec*"],
+      include: ["src/**/*.browser*",
+        //  "src/**/*.spec*"
+        ],
       exclude: [...configDefaults.exclude, 'e2e/**/**', 'cypress/**', 'playwright/**'],
       root: fileURLToPath(new URL('./', import.meta.url)),
       browser: {
+        enabled: true,
         provider: 'playwright',
         instances: [
           { browser: 'chromium' },

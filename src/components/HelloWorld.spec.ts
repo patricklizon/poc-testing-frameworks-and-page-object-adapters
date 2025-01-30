@@ -1,10 +1,10 @@
-import { afterEach, describe, it, expect } from 'vitest'
+import { describe, it, expect, beforeEach } from 'vitest'
 import { cleanup, render } from '@testing-library/vue'
 import { TestingLibraryAdapter } from '../lib/page-object/adapter.testing-library'
 import HelloWorld from './HelloWorld.vue'
 import { HelloWorldPageObject } from './HelloWorld.po'
 
-afterEach(cleanup)
+beforeEach(cleanup);
 
 describe('HelloWorld', () => {
   it('renders properly', async () => {
